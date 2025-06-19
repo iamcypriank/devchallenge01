@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Card</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+    *{
+        margin: 0;
+        padding : 0;
+        box-sizing: border-box;
+    }
+
+    :root{
+        --primaryFontColor : black;
+        --secodaryFontColor : rgb(71, 71, 71);
+        --lineColor : rgb(244, 237, 237);
+    }
+    body{
+        font-family: "Inter", sans-serif;
+        width: 100%;
+        min-height: 100vh;
+        color: var(--secodaryFontColor);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 400px;
+        border-radius: 12px;
+        box-shadow: 4px 4px 12px 0 rgb(212, 212, 212),-4px -4px 12px 0px rgb(246, 246, 246);
+    }
+    .hero-section{
+        position: relative;
+    }
+    
+    .hero-image{
+        width: 100%;
+        object-fit:cover;
+        position: relative;
+        z-index: 1;
+        border-radius: 12px 12px 0 0;
+    }
+    .overlay{
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 204px;
+        left: 0;
+        z-index: 2;
+        
+    }
+    .hero-text{
+        font-weight: 500;
+        font-size: 24px;
+        color: var(--primaryFontColor);
+
+    }
+
+    .details{  
+        line-height: 1.5;
+        padding: 16px;
+    }
+    hr{
+        border: none;
+        height: 1px;
+        background-color: var(--lineColor);
+    }
+    .user{
+        display: flex;
+        padding: 16px;
+        gap: 16px;
+        align-items: center;
+    }
+    .avatar{
+        height: 50px;
+        border-radius: 50%;
+        border: 4px solid rgb(222, 220, 220);
+    }
+    .user-details{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+</style>
+<body>
+    <div class="card">
+       <div class="hero-section">
+        <img class="hero-image image"  src="resources/hero-image-1.jpg" alt="">
+        <img src="resources/white-overlay.svg" alt="" class="overlay">
+        <div class="details">  
+        <h1 class="hero-text">Perfect Solution for small business</h1>
+        <p class="hero-para">Small businesses need  to generate leads to grow.You can use tools like Ringy</p>
+        </div>
+       </div>
+       <hr>
+       <div class="user">
+        <img src="resources/avatar-image-business-card-1.png" alt="" class="avatar">
+        <div class="user-details">
+            <h4>Amy Burgess</h4>
+            <p>Customer Manager, Solution Oy</p>
+        </div>
+       </div>
+    </div>
+    
+</body>
+</html>

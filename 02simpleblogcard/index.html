@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Card</title>
+</head>
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+    *{
+        margin: 0;
+        padding : 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        font-family: "Inter", sans-serif;
+        width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    }
+    .card{
+        width: 300px;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        border-radius: 8px;
+        box-shadow: 8px 8px 20px 0px rgba(85, 85, 85, 0.08);
+        overflow: hidden;
+    }
+
+    .img{    
+        height: 100px;
+        background-color: #F8E8F2;
+        border-radius:8px;
+    }
+    .category{
+        font-size: 14px;
+        background-color: #f1eaff;
+        color: #59238f;
+        width: fit-content;
+        padding: 4px 16px;
+        border-radius: 16px;
+
+    }
+
+    hr{
+        width: 100%;
+        border: none;
+        height: 1px;
+        background-color: #ccc;
+        margin-left:-12px;
+        width: 100vw;        
+    }
+    .card-head{
+        font-weight: 550;
+    }
+    
+
+</style>
+<body>
+
+    <div class="card">
+        <div class="img">
+
+        </div>
+        <p class="category">Design</p>
+        <h3 class="card-head">Embracing Minimalism</h3>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolor natus minus nostrum optio ratione! Inventore, cumque repellendus?</p>
+        <hr>
+        <p class="author">anne lee</p>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

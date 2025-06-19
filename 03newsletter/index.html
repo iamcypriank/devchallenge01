@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width
+    , initial-scale=1.0">
+    <title>News Letter</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root{
+        --color : #767B88;
+        --secondaryColor : #294CCE; 
+    }
+
+    body{
+        width: 100vw;
+        min-height: 100vh;
+        font-family: "Inter", sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--color);
+    }
+
+
+    section>h1{
+        color: black;
+    }
+    
+
+    section >p {
+        margin-left: 12px;
+        margin-right: 12px;
+        max-width: 60ch;
+    }
+    section{
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 16px;
+
+    }
+
+    .p2{
+        margin-top: -10px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        gap: 16px;
+        box-shadow: 8px 8px 20px 0px rgba(57, 56, 56, 0.08);
+        border-radius: 12px;
+    }
+
+    form > input{
+        padding: 20px;
+        font-size: 16px;
+        text-align: center;
+        border-radius: 12px;
+        background-color: #F9FAFC;
+        border: 1px solid grey;
+    }
+
+    form>input::placeholder{
+        font-weight:bold;
+    }
+    form>input[type="submit"]{
+        color: white;
+
+        font-weight: bold;
+        background-color: var(--secondaryColor);
+        border: none;
+    }
+    form>p{
+        font-size: 14px;
+        text-align: left;
+    }
+
+</style>
+<body>
+    <section>
+        <img src="src/logo.svg" alt="" class="logo">
+        <h1>Join our newsletter</h1>
+        <p>Keep up with our latest collections, exclusive, deals, and special offers!</p>
+        <p class="p2"> We introduce a new collection every week, so stay tuned to snag the hottest items just for you
+        </p>
+
+        <form action="">
+            <input type="email" placeholder="Enter your email address">
+             <input type="submit" value="Subscribe now">
+             <p>your email is 100% confidential and won't send you any spam.</p>
+        </form>
+    </section>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Lisiting</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+    *{
+        margin: 0;
+        padding : 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        font-family: "Inter", sans-serif;
+        width: 100vw;
+        min-height: 100vh;
+        
+    }
+
+    main{
+        padding: 0 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .hero-title{
+        padding-top: 40px ;
+        text-align: center;
+        font-size: 40px;
+        
+    }
+    .seperator{
+        height: 12px;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;        
+    }
+
+    article{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+    }
+    .image{
+        border-radius: 8px;
+        height: 125px;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        font-size: 14px;
+    }
+    .date{
+        color: rgb(108, 108, 108);
+    }
+
+
+
+    @media screen and (max-width : 600px) {
+        main{
+            padding: 20px;
+        }
+
+        article{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    
+</style>
+<body>
+    <main>
+        <h1 class="hero-title">We release interesting articles about technology</h1>
+        <img class="seperator" src="resources/Seperator.svg" alt="">
+        <section>
+            <article>
+                <img src="resources/photo_1.png" alt="" class="image">
+                <div class="content">
+                    <h3 class="article-title">Unlocking the Power of Cloud Computig: A Guide to Scalable Solutions</h3>
+                    <p class="date">November 12,2024</p>
+                </div>
+            </article>
+            <article>
+                <img src="resources/photo_2.png" alt="" class="image">
+                <div class="content">
+                    <h3 class="article-title">The Future of AI: How Machine Learning i Revolutionizing Industries</h3>
+                    <p class="date">November 12,2024</p>
+                </div>
+            </article>
+            <article>
+                <img src="resources/photo_3.png" alt="" class="image">
+                <div class="content">
+                    <h3 class="article-title">The Impact of 5G on Business:How Faster Networks are Transforming the Way We Work</h3>
+                    <p class="date">November 12,2024</p>
+                </div>
+            </article>
+        </section>
+    </main>  
+</body>
+</html>

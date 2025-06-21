@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        main{
+            min-height:100vh;
+            width: 100%;
+            font-family: "Outfit", sans-serif;
+            line-height: 1.5;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 576px;
+            padding: 80px;
+         }
+
+         :root{
+            --fontColor1 : black;
+            --fontColor2 : #394151;
+            --fontColor3 : #243dad;
+            --fontColor4 : white;
+            --bgColor1 : #F3F4F6;
+
+         }
+
+         /* container */
+         .container{
+            /* background */
+            background-color: var(--bgColor1);
+            background-image: url(resources/Background_decor.svg);
+            background-position: top left;
+            background-repeat: no-repeat;
+            /* container layout */
+            position: relative;
+            display: grid;
+            border-radius: 40px;
+            padding: 40px ;
+
+         }
+
+         /* hero section */
+        
+         .hero-text1{
+            color: var(--fontColor3);
+         }
+         .hero-title{
+            font-weight: 550;
+         }
+         .hero-text2{
+            width: 47ch;
+            color: var(--fontColor2);
+         }
+         /* member section */
+
+  
+         .members{
+            position: absolute;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-areas:
+            ". member1 member2"
+            "member3 member4 member5"
+            ;
+            top: 0;
+            right: 0;
+
+         }
+
+         .member{
+            width: fit-content;
+            position: relative;
+
+         }
+         .image{
+            display: block;
+            height: 288px;
+            width: 284px;
+
+         }
+         .member-image{
+            display: block;
+         }
+         .member-details{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            padding: 16px;
+            color: var(--bgColor1);
+            z-index: 2;
+         }
+
+         .gradient{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+         }
+
+         .member1{
+            grid-area: member1;
+            background-color: #C1B6F8;
+        }
+         .member2{
+            grid-area: member2;
+            background-color: #EDACD2;
+        }
+         .member3{
+            grid-area: member3;
+            background-color: #9DC3F9;
+        }
+
+         .member4{
+            grid-area: member4;
+            background-color: #F8D8B1;
+        }
+         .member5{
+            grid-area: member5;
+            background-color: #86E8D5;
+            border-bottom-right-radius: 20px;
+        }
+
+        .member5 , .member5 .gradient{
+          border-bottom-right-radius: 40px;
+        }
+
+        .member2 , .member2 .gradient{
+          border-top-right-radius: 40px;
+        }
+
+         /* bottom section */
+         .bottompart{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            gap: 4px;
+         }
+
+
+         /* tablet  view  */
+         @media screen and (max-width : 1349px) {
+          main{
+            grid-template-columns: 852px;
+            grid-template-rows: 864px;
+
+          }
+      
+          .members{
+            grid-template-rows: 1fr;
+            grid-template-rows: repeat(3,1fr);
+            
+          }
+          .member1{
+            grid-area: 2 / 1 / 3 / 2;
+          }
+
+          .member2{
+            grid-area: 2 / 2 / 3 / 3;
+          }
+          .member3{
+            grid-area: 2 / 3 / 3 / 4;
+          }
+          .member4{
+            grid-area:3 / 2 / 4 / 3;
+          }
+          .member5{
+            grid-area: 3 / 3 / 4 / 4;
+          }
+
+          /* unset border radius */
+          .member5 , .member5 .gradient{
+          border-bottom-right-radius: 40px;
+        }
+
+        .member2 , .member2 .gradient{
+          border-top-right-radius: unset;
+        }
+      }
+
+      @media screen and (max-width : 1023px){
+        main{
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            padding: 20px;
+
+        }
+        .container{
+          grid-auto-rows: 1000px;
+        }
+        .members{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            top: 284px;
+            left: 0;
+          }
+        .member5 , .member5 .gradient{
+          border-bottom-right-radius: unset;
+        }
+          .hero-text2{
+            width: 100%;
+          }
+      } 
+    </style>
+</head>
+<body>
+  <main>
+    <div class="container">
+    <div class="hero-section">
+      <p class="hero-text1">Our team</p>
+      <h1 class="hero-title">Meet the brain</h1>
+      <p class="hero-text2">
+        We are proud to have them as part of our community and look forward to continuing to push the boundaries of what's possible in the world of digital art.
+      </p>
+    </div>
+
+    <div class="members">
+      <div class="member member1">
+        <div class="member-image">
+          <img src="resources/person_1.png" alt="Liam Novak" class="image image1" />
+        </div>
+        <div class="member-details">
+          <h4 class="member-name">Liam Novak</h4>
+          <p class="member-role">Software Engineer</p>
+        </div>
+        <img src="resources/Gradient.svg" alt="" class="gradient" />
+      </div>
+
+      <div class="member member2">
+        <div class="member-image">
+          <img src="resources/person_2.png" alt="Sophia Moretti" class="image image2" />
+        </div>
+        <div class="member-details">
+          <h4 class="member-name">Sophia Moretti</h4>
+          <p class="member-role">Business Development Manager</p>
+        </div>
+        <img src="resources/Gradient.svg" alt="" class="gradient" />
+      </div>
+
+      <div class="member member3">
+        <div class="member-image">
+          <img src="resources/person_3.png" alt="Member 3" class="image image3" />
+        </div>
+        <div class="member-details">
+          <h4 class="member-name">Ethan Rossi</h4>
+          <p class="member-role">Business Development Manager</p>
+        </div>
+        <img src="resources/Gradient.svg" alt="" class="gradient" />
+      </div>
+
+      <div class="member member4">
+        <div class="member-image">
+          <img src="resources/person_4.png" alt="Ethan Rossi" class="image image4" />
+        </div>
+        <div class="member-details">
+          <h4 class="member-name">Isabella Ricci</h4>
+          <p class="member-role">UX Designer</p>
+        </div>
+        <img src="resources/Gradient.svg" alt="" class="gradient" />
+      </div>
+
+      <div class="member member5">
+        <div class="member-image">
+          <img src="resources/person_5.png" alt="Isabella Ricci" class="image image5" />
+        </div>
+        <div class="member-details">
+          <h4 class="member-name">Noah Conti</h4>
+          <p class="member-role">Content Creator</p>
+        </div>
+        <img src="resources/Gradient.svg" alt="" class="gradient" />
+      </div>
+    </div>
+    <div class="bottompart">
+      <p class="btn-text">See all members</p>
+      <img src="resources/arrow up right.svg" alt="Arrow icon" class="arrow" />
+    </div>
+  </div>
+  </main>
+</body>
+</html>

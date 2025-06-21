@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primaryFontColor: rgb(0, 0, 0);
+            --secondaryFontColor: rgb(97, 97, 97);
+            --bgColor1: #F3F4F6;
+            --btnColor1: #662DD1;
+            --btnColor2: white;
+            
+        }
+
+
+        body{
+            font-family: "Outfit", sans-serif;
+            line-height: 1.5;
+         }
+
+        /* Desktop */
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: auto;
+            padding: 36px;
+            gap: 0 40px;
+        }
+
+        /* section1 */
+        .section1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .product-image {
+            height: 100%;
+            border-radius: 4px;
+        }
+
+        /* section2 */
+        .section2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 16px;
+            
+        }
+        .product-category{
+            display: flex;
+            gap: 4px;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--primaryFontColor);
+        }
+        .product-type{
+            font-weight: 300;
+            color: var(--secondaryFontColor);
+        }
+
+        .product-title{
+            width: 25ch;
+        }
+        .product-description{
+            width: 80ch;
+        }
+        .product-highlights > p{
+            font-weight: 600;
+        }
+        .product-highlights ul{
+            margin-left: 16px;
+        }
+
+        .product-specification{
+            gap: 32px;
+            padding: 16px 40px;
+            background-color: var(--bgColor1);
+            display: inline-flex;
+            width: fit-content;
+            border-radius: 8px;
+        }
+        .specs{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .title{
+            color: var(--secondaryFontColor);
+        }
+        .value{
+            font-weight: 600;
+        }
+        .price{
+            font-size: 36px;
+        }
+        .buttons{
+            display: flex;
+            gap: 16px;
+        }
+
+        button{
+            padding: 8px 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            border: none;
+            border-radius: 4px;
+        }
+        .buy{
+            background-color: var(--btnColor1);
+            color: white;
+        }
+        .wishlist{
+            border: .1px solid gray;
+        }
+
+
+        @media screen  and (max-width : 1349px){
+            
+            .container{
+                grid-template-columns: repeat(2,1fr);
+            }
+            .section2{
+                flex-wrap: wrap;
+            }
+            .product-title{
+                width: 20ch;
+            }
+            .product-description{
+                width: 100%;
+            }
+            .price{
+                font-size: 32px;
+            }
+            
+        }
+
+        @media screen and (max-width : 1023px){
+            .container{
+                display: flex;
+                flex-direction: column;
+                padding: 16px;
+                gap: 32px;
+            }
+            .section2{
+                display: flex;
+                align-items: flex-start;
+                
+            }
+            .product-image{
+                width: 100%;
+                object-fit: cover;
+            }
+            .product-title{
+                width: 100%;
+            }
+            .product-specification{
+                width: 100%;
+            }
+            .buttons{
+                width: 100%;
+            }
+            button{
+                
+                width: 100%;
+            }
+
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="section1">
+            <img src="resources/shoe_image.jpg" alt="" class="product-image">
+        </div>
+        <div class="section2">
+            <div class="product-category">
+                <p class="text">Home</p>
+                <p class="text">-</p>
+                <p class="text">Products</p>
+                <p class="text">-</p>
+                <p class="text product-type">Sneakers</p>
+            </div>
+            <h1 class="product-title">
+                Nike Air Zoom Pegasus 38 for Running Men
+            </h1>
+            <p class="product-description">
+                The Nike Air Zoom Pegasus 38 is a high-performance running shoe designed for speed and agility. With its
+                lightweight and responsive midsole, this shoe provides a smooth ride and excellent cushioning. The
+                Pegasus 38 features a full-length Zoom Air unit for added bounce and a more natural stride. The upper is
+                made of a breathable mesh material with a supportive Flyknit construction for a snug and comfortable
+                fit.
+            </p>
+            <div class="product-highlights">
+                <p>Highlights:</p>
+                <ul>
+                    <li>Lightweight and Responsive Midsole.</li>
+                    <li>Full-Length Zoom Air Unit.</li>
+                    <li>Breathable Mesh Uppe.</li>
+                </ul>
+            </div>
+            <div class="product-specification">
+                <div class="specs">
+                    <p class="title">COLOR</p>
+                    <p class="value">Black</p>
+                </div>
+                <div class="specs">
+                    <div class="title">SIZE</div>
+                    <div class="value">42</div>
+                </div>
+                <div class="specs">
+                    <div class="value price">₹6,000</div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="buy">Add to cart</button>
+                <button class="wishlist"><img class="icon" src="resources/heart.svg" alt="">Add to wishlist</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

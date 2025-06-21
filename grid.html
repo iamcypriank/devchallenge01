@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+
+        .container{
+            width: 100%;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(4,100px);
+            gap: 12px 20px;
+            
+        
+        }
+        .box{
+            background-color: #E91E63;
+            color: white;
+            font-size: 24px;
+            
+        }
+        .box1{
+            background-color: green;
+            grid-area: 1 / 1 / 4 / 2;
+            justify-content: center;
+            
+
+
+        }
+
+        p{
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>this is it</p>
+        
+    </div>
+</body>
+</html>

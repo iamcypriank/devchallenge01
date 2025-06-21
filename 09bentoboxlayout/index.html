@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bento Box Layout</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: "Outfit", sans-serif;
+            line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding: 16px;
+         }
+         :root{
+            --fontColor1 : black;
+            --fontColor2 : #52525A;
+            --accentColor1 : #F3F4F6; 
+         }
+
+         .hero-section{display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+         }
+         .hero-text > p{
+            color: var(--fontColor2);
+         }
+         .card-container{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: var(--accentColor1);
+            border-radius: 12px;
+            gap: 20px;
+
+         }
+         .card{
+            text-align: left;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 4px -2px rgb(211, 209, 209) ;
+         }
+         .card-content{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+         }
+         .card-title{
+            font-size: 20px;
+         }
+         .card-text{
+            color: var(--fontColor2);
+         }
+         .card-title , .card-text{
+            align-self: flex-start;
+         }
+         .card-image img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+
+         }
+         @media screen and (min-width : 678px){
+            .hero-section{
+                padding: 12px 20%;
+            }
+            .card-container{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-template-areas: "card1 card2"
+                "card3 card3"
+                "card4 card4"
+                "card5 card5";
+            }
+            .card{
+                height: 100%;
+            }
+
+            
+            .card1{
+                grid-area: card1;
+                flex-direction: column-reverse;
+            }
+            .card2{
+                grid-area: card2;
+            }
+            .card3{
+                grid-area: card3;    
+                flex-direction: row-reverse;
+
+            }
+            .card4{
+                grid-area: card4;
+                flex-direction: row;
+            }
+            .card5{
+                grid-area: card5;
+                flex-direction: row-reverse;
+            }
+         }
+
+         @media screen and (min-width : 1024px) {
+            
+            .card-container{
+                grid-template-columns: repeat(3,1fr);
+                grid-template-areas: " card1 card2 card3 "
+                "card4 card4 card5"  ;
+            }
+            .card5 .card-image img{
+                height: 100%;
+            
+            }
+         }
+
+
+
+
+    </style>
+</head>
+<body> 
+<div class="hero-section">
+    <div class="hero-logo">
+        <img src="resources/Logo.svg" alt="" class="logo">
+    </div>
+    <div class="hero-title">
+        <h1>
+            Explore Our Essential Features for Effectiave Data Management
+        </h1>
+    </div>
+    <div class="hero-text">
+        <p>Explore how our platform empowers organization to elevate their data strategy, driving innovation and informed decision-making.</p>
+    </div>
+</div>
+<div class="card-container">
+    <div class="card card1">
+        <div class="card-image">
+            <img src="resources/image_1@2x-1.png" alt="">
+        </div>
+        <div class="card-content">
+            <div class="card-title">
+            <h3>
+                Create high-quality,original content at scale
+            </h3>
+        </div> 
+        <div class="card-text">
+            <p>Scale original content production efficently.</p>
+        </div>
+        </div>
+    </div>
+    <div class="card card2">
+        <div class="card-image">
+            <img src="resources/image_2@2x-1.png" alt="">
+        </div>
+         <div class="card-content">
+            <div class="card-title">
+            <h3>
+              Repurpose existing content across multiple channels and formats ( audio, video )  
+            </h3>
+         </div>
+          <div class="card-text">
+            <p>
+                Recycle content for divers platforms and create new content.
+            </p>
+          </div>
+         </div>
+        </div>
+        <div class="card card3">
+        <div class="card-image">
+            <img src="resources/image_3@2x-1.png" alt="">
+        </div>
+         <div class="card-content">
+            <div class="card-title">
+            <h3>
+                Optimize content for search engines and target audiences
+            </h3>
+         </div>
+          <div class="card-text">
+            <p>
+                Tailer content for SEO and audience engagement.
+            </p>
+          </div>
+         </div>
+        </div>
+        <div class="card card4">
+        <div class="card-image">
+            <img src="resources/image_4@2x-1.png" alt="">
+        </div>
+         <div class="card-content">
+            <div class="card-title">
+            <h3>
+                Automate repetitive marketing tasks and workflows
+            </h3>
+         </div>
+          <div class="card-text">
+            <p>
+                Streamline marketing tasks with automations.
+            </p>
+          </div>
+         </div>
+        </div>
+        <div class="card card5">
+        <div class="card-image">
+            <img src="resources/image_5@2x-1.png" alt="">
+        </div>
+         <div class="card-content">
+            <div class="card-title">
+            <h3>
+                Integrate with your favorite marketing tools and platform
+            </h3>
+         </div>
+          <div class="card-text">
+            <p>
+                Seamlessly integrate with preferred marketing tools.
+                
+            </p>
+          </div>
+         </div>
+        </div> 
+</div>   
+</body>
+</html>

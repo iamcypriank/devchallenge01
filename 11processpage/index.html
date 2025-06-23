@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            
+            --fontColor1 : #384152;
+            --fontColor2:#8879D8;
+            --fontColor3 : #5C6470;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            font-family: "Outfit", sans-serif;
+            line-height: 1.5;
+            background-image: url(resources/background-png.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: relative;
+        }
+
+        .container{
+            max-width: 1280px;
+            padding: 0 80px 0px 80px;
+            
+        }
+
+        /* hero section */
+        .hero{
+            position: absolute;
+            padding: 16px;
+            top: 20%;
+            margin-left: 16px;
+        }
+        .hero-text{
+            color: var(--fontColor1);
+            font-weight: 600;
+            font-size: 40px;
+            letter-spacing: -2px;
+            width: 20ch;
+        }
+        
+        .hero-para{
+            color: var(--fontColor2);
+            font-weight: 600;
+            font-size: 24px;
+        }
+        
+        .image{
+            height: 50px;
+        }
+        /* services section */
+        .services{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 16px;
+            gap: 16px;
+        }
+        .service{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 20%;
+            gap: 16px;
+        }
+
+        .title{
+            color: var(--fontColor1);
+            font-weight: 600;
+        }
+        .text{
+            color: var(--fontColor3);
+        }
+        .highlighted{
+            color: var(--fontColor2);
+            font-weight: 500;
+        }
+        hr{
+
+            border:1px dashed rgb(232, 232, 232);
+            height: 100vh;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <p class="hero-para">
+                Our Process
+            </p>
+            <h1 class="hero-text">
+                Easy And Perfect Solution For Your Business App
+            </h1>
+        </div>
+        <div class="services">
+            <hr>
+            <div class="service">
+                
+                <img src="resources/process-icon-1.svg" alt="" class="image">
+                <h4 class="title">47+ Components</h4>
+                <p class="text">Save time and build products with <span class="highlighted">well-organized and customizable</span> desktop components for Figma.</p>
+            </div>
+            <hr>
+            <div class="service">
+                
+                <img src="resources/process-icon-2.svg" alt="" class="image">
+                <h4 class="title">Documentation</h4>
+                <p class="text">Developer handoff made. Component and style guide documention for your team in <span class="highlighted">one place.</span></p>
+            </div>
+            <hr>
+            <div class="service">
+                
+                <img src="resources/process-icon-3.svg" alt="" class="image">
+                <h4 class="title">Design faster</h4>
+                <p class="text">Stop wasting time on creaing everything from scratch for <span class="highlighted"> every new project</span> you start</p>
+            </div>
+            <hr>
+            <div class="service">
+                
+                <img src="resources/process-icon-4.svg" alt="" class="image">
+                <h4 class="title">Customize</h4>
+                <p class="text">Easily apply your branding by changing fort,  color and <span class="highlighted"> component properties.</span></p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 100px;
+            background-color: palegreen;
+
+        }
+        .btn{
+            width: calc(5rem + .75rem);
+            height: calc(2.5rem + .5rem);
+            background-color: white;
+            position: relative;
+            border-radius: 2rem;
+            
+        }
+        #toggle{
+            background-color: black;
+            height: 2.5rem;
+            width: 2.5rem;
+            position: absolute;
+            top: 0.25rem;
+            left: 0.25rem;
+            border-radius: 50%;
+            transition: .5s ease-in-out;
+        }
+
+        #toggle-btn{
+            opacity: 0;
+            position: absolute;
+            left: -1000px;
+            right: -1000px;
+        }
+        #toggle-btn:checked + label{
+            background-color: pink;
+            left: calc(100% - 2.75rem);
+            transition: .5s ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="btn">
+        <input type="checkbox" name="" id="toggle-btn">
+        <label for="toggle-btn" id="toggle">
+        </label>
+        
+    </div>
+    
+</body>
+<script>
+
+</script>
+</html>

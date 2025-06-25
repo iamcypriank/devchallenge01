@@ -33,7 +33,8 @@
 }
 
 /* font family */
-body{
+html , body{
+
     font-family: "Be Vietnam Pro", sans-serif;
 }
 

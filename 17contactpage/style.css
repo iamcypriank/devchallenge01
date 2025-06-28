@@ -1,0 +1,238 @@
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root{
+    /* font-size */
+    --xl : 4rem;
+    --l : 2rem;
+    --m : 1rem;
+    --s : 0.875rem;
+    --btnFontSize : 1.25rem ;
+
+    /* font-weight */
+    --thin : 300;
+    --normal : 500;
+    --bold : 700;
+
+
+    /* font-colors */
+    --fontColor1 :#FFF ;
+    --fontColor2 : black;
+
+
+    --btnColor1 : #4036AA;
+
+    /* background-color */
+
+}
+
+html{
+     font-family: "Be Vietnam Pro", sans-serif;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(resources/background.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* header */
+header{
+    padding: 1rem 4rem;
+}
+
+
+/* main */
+main{
+   padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    padding: 1rem 20%;
+    display: flex;
+    flex-direction: column;
+    align-items : center;
+    justify-content: center;
+    width: 100%;
+    gap: 4rem;
+}
+
+
+/* title-container */
+.title-container{
+    color: var(--fontColor1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+.title-container .title{
+    width: 15ch;
+    font-size: var(--xl);
+}
+.title-container .text{
+    width: 30ch;
+    font-size: var(--l);
+    font-weight: var(--normal);
+}
+
+
+/* form */
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: rgb(230, 226, 226,.25);
+    color: var(--fontColor1);
+    border-radius: 1em;
+    width: 100%;
+    
+
+}
+
+.row{
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .25rem;
+    width: 100%;
+}
+
+label{
+    font-size: var(--s);
+}
+input , select , button{
+    padding: 1.25rem;
+    width: 100%;
+    height: 4rem;
+    border-radius: 1em;
+    border: none;
+    font-size: var(--m);
+    font-weight: var(--bold);
+}
+
+input:focus , select:focus {
+    outline: none;
+}
+
+select{
+    appearance: none;
+
+}
+.field{
+    position: relative;
+}
+
+.select-box{
+    height: 10px;
+    width: 10px;
+    border-top: 0;
+    border-right: 2px;
+    border-bottom: 2px;
+    border-left: 0;
+    border-color: black;
+    border-style: solid;
+    z-index: 1;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 90%;
+    top: calc(55%);
+}
+
+textarea{
+    width: 100%;
+    border-radius: 1rem;
+    resize: none;
+    height: 10rem;
+    padding: 1rem;
+}
+
+::placeholder , input{
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: var(--m);
+    font-weight: var(--bold);
+}
+
+button{
+    color: var(--btnColor1);
+    font-size: var(--btnFontSize);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media screen and (max-width : 1024px) {
+    section{
+       padding: 1rem 2rem;
+    
+    }
+}
+@media screen and (max-width :  767px) {
+     
+
+    body{
+        background-position: top;
+    }
+    .title-container{
+        color: var(--fontColor1);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+    }
+    .title-container .title{
+        width: 80%;
+        font-size: var(--l);
+    }
+    .title-container .text{
+        width: 100%;
+        font-size: var(--m);
+        font-weight: var(--normal);
+    }
+
+    section{
+        padding: 0;
+    }
+    
+    main{
+       padding: 1rem 1rem;
+    
+    }
+
+    .row{
+        flex-direction: column;
+    }
+    form{
+        padding: 1rem;
+        width: 100%;
+    }
+}
+

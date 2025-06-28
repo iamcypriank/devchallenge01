@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+    font-family: "Outfit", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    
+    --bgColor1 : #262833 ;
+
+    --fontColor1 : #FFF ;
+
+
+    --cardBgColor1 : #E4ECE7 ;
+    --cardBgColor2 : #73AF6F ;
+
+    --cardFontColor1 :#262832 ;
+    --cardFontColor2 :#262833 ;
+
+    --border-color : rgb(74, 74, 74);
+}
+
+
+/* header */
+
+header{
+    color: white;
+    background-color: var(--bgColor1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem; 
+}
+
+/* profile */
+header .profile{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.username{
+    font-weight: 500;
+}
+
+/* main */
+main{
+    color: var(--fontColor1);
+    background-color: var(--bgColor1);
+    border-top: .1px solid var(--border-color);
+    display: grid;
+    grid-template-columns: 3rem auto;
+}
+
+ /* aside */
+aside{
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    border-right: 1px solid var(--border-color);
+}
+
+.tickets-count{
+    display: none;
+}
+
+.button{
+    display: flex;
+    gap: 1rem;
+}
+.category{
+    display: none;
+    font-size: .75rem;
+}
+.button p{
+    display: none;
+    font-weight: 600;
+}
+
+section{
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 1rem;
+}
+
+article{
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 1em;
+}
+/* card section */
+.cards{
+    display: grid;
+    gap: 1rem;
+}
+.card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card-container p.title{
+    font-weight: 600;
+}
+
+/* card */
+.card{
+    align-self: center;
+    width: clamp(15rem,100%,16.5rem);
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+}
+.card .top{
+    border-radius: 1em 1em 0 0;
+    color: var(--cardFontColor1);
+    background-color:var(--cardBgColor1);
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 3rem;
+    font-size: 1rem;
+}
+
+.right img{
+    height: 1.5rem;
+    margin-right: -2rem;
+}
+.top .left{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.top .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.card .bottom{
+    color: var(--cardFontColor2);
+    background-color: var(--cardBgColor2);
+    border-radius: 0 0 1em 1em;
+    padding: 1rem;
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+}
+
+/* card-details */
+.card-details{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.card-info{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.card-info p.title{
+    font-size: .75rem ;
+    font-weight: 400;
+}
+
+.auth-info{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: .75rem;
+}
+
+.vr{
+    height: 2rem;
+    width: .2px;
+    background-color: #E4ECE7;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .5rem;
+}
+.info-bold{
+    font-weight: 600;
+}
+hr{
+    height: .1px;
+    background-color: var(--border-color);
+    width: 100%;
+    border: none;
+}
+
+/* spending limits */
+
+.spending-limits{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* metrics */
+
+.capacity{
+    height: .5rem;
+    background-color: white;
+    margin: .5rem 0;
+    border-radius: 1rem;
+    
+}
+
+.used{
+    height: 100%;
+    width: 20%;
+    background-color: var(--cardBgColor2);
+    border-radius: 1rem 0 0 1rem;
+
+}
+.metrics .small{
+    font-size: .75rem;
+    
+}
+
+/* inventory */
+
+
+.inventory{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.inventory-details{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.inventory-details p.title{
+    font-weight: 600;
+}
+.card2{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+.card2 .left{
+    background-color: var(--cardBgColor1);
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--cardFontColor1);
+    border-radius: 1em 0 0 1em;
+}
+
+.card2 .left p{
+    font-weight: 500;
+}
+.card2 .right{
+    background-image: url(resources/background-decor.svg);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+    background-color: var(--cardBgColor2);
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 0 1em 1em 0;
+}
+.card2 .right p{
+    color: var(--cardFontColor1);
+    background-color: var(--cardBgColor1);
+    padding: .25rem 1rem;
+    border-radius: 1rem;
+    
+}
+
+
+/* second inventory */
+
+.inventory-details-2{
+    display: grid;
+}
+
+.inventory-details .title{
+    display: flex;
+    gap: .5rem; 
+    padding: .25rem 1rem;
+    border-radius: 1rem;
+}
+.title p{
+    font-weight: 600;
+}
+.no-of-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1rem;
+    width: 1.5rem;
+    background-color: #42454C;
+    border-radius: 1rem;
+}
+.no-of-cards p{
+    font-size: .75rem;
+}
+
+
+.card3 .top{
+    background-color: #E5D6F3;
+}
+.card3 .bottom{
+    background-color: #A786C5;
+}
+
+.card4 .top{
+    background-color: #F6DDC9;
+}
+.card4 .bottom{
+    background-color: #EAAE7A;
+}
+
+.card5{
+    height: 179.5px;
+    border: 1px dashed var(--border-color);
+    width: clamp(15rem,100%,16.5rem);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style:dashed;
+}
+.card5{
+    font-weight: 600;
+}
+
+/* stats */
+.stats {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    flex-wrap:wrap;
+}
+.stat{
+    display: flex;
+    gap: 1rem;
+}
+.stat .info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.stat1 img{
+    background-color: #73AF6F;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.stat2 img{
+    background-color: #A786C5;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.stat3 img{
+    background-color: #EAAE7A;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+
+
+
+/* tablet view */
+@media screen and (min-width  : 1024px) {
+    main{
+        grid-template-columns: 14rem auto;
+        
+        
+    }
+
+    /* layout */
+    .card-container{
+        padding: 1.5rem;
+        margin: 1.5rem;
+        margin-left: rem;
+        width: 298px;
+        height: 960px;
+    }
+
+    .inventory.details{
+        width: 100%;
+        
+    }
+  
+
+    aside{     /* margin: 3rem 0rem 3rem -3rem; */
+        padding: 1.5rem 1.5rem;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    section{
+        padding: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+
+
+    
+    .button{
+        align-items: center;
+        width: 100%;
+        gap: .5rem;
+    }
+    
+    .category{
+        display: block;
+        font-size: .75rem;
+    }
+    .button p{
+        display:block;
+        font-weight: 600;
+    }
+    .tickets-count{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .75rem;
+        height: 1rem;
+        width: 1.5rem;    
+        background-color: #42454C;
+        border-radius: 1rem;
+        justify-self: flex-end;
+    }
+    
+    .section-vr{
+        align-self: self-start;
+        height: 100%;
+        width: 1px;
+        background-color: var(--border-color);
+    }
+    article{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        width: 100%;
+
+    }
+
+    .card1{
+        transform: rotate(-90deg);
+        transform-origin: center;
+        width: 264px;
+        height: 179.5px;
+        margin: 3rem 0 3rem -1rem ;
+
+    }
+
+    .card1 .top .left{
+        gap: 2rem;
+    }
+    .card1 .top .right{
+        gap: 2rem;
+    }
+
+
+    
+}
+
+
+@media screen and (min-width  : 1350px) {
+    
+    .inventory-details-2 .cards{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .stats{
+        justify-content: space-between;
+    }
+
+    
+}
